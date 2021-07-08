@@ -7,6 +7,7 @@ jobs:
       - image: circleci/golang:1.15.8
     steps:
       - checkout
+      - run: echo "<h1>h1</h1>"
       - restore_cache:
           keys:
             - go-mod-v4-{{ checksum "go.sum" }}
